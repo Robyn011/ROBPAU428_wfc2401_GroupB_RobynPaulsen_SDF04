@@ -1,4 +1,20 @@
-// 1. Create two variables, firstCard and secondCard. 
-// Set their values to a random number between 2-11
+let firstCard = Math.floor(Math.random()*10) + 2
+let secondCard = Math.floor(Math.random()*10) + 2
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true 
+let message = ""
+if (sum <= 21) {
+  message = "Do you want to draw a new card?"
+ 
+  }
+else if (sum === 21){
+  message = "Wohoo! You've got BlackJack!"
+  hasBlackJack = True
+}
+else if (sum > 21) {
+  message = "You have lost the game"
+  let isAlive = false
+}
 
-// 2. Create a variable, sum, and set it to the sum of the two cards
+console.log(message) 
