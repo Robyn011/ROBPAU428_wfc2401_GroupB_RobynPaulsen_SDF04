@@ -1,3 +1,16 @@
+let firstCard = Math.floor(Math.random()*10) + 2
+let secondCard = Math.floor(Math.random()*10) + 2
+let cards = [firstCard, secondCard]//array - order list of items
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
+
+
+
 
 function startGame() {
     renderGame()
@@ -29,6 +42,7 @@ messageEl.textContent = message
 }
 
 function newCard() { 
+   if (isAlive === true && hasBlackJack === false) {  
   let card = Math.floor(Math.random()*10) + 2
  sum += card
  cards.push(card)
